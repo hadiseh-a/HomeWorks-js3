@@ -149,3 +149,6 @@ body {
     max-height: 80px;
   }
 }
+.lineThrough{
+  text-decoration-line:line-through;
+}
