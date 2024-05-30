@@ -36,10 +36,10 @@ const data = [
   },
 ];
 const cards=document.querySelector(".cards");
+const cardSelected=document.querySelector(".cardSelected");
 for (const iterator of data) {
   const card=document.createElement("article");
   card.classList.add("cards","cards__card");
-  card.setAttribute("id",iterator.id);
   cards.append(card);
 
   const imageContainer=document.createElement("div");
@@ -79,5 +79,12 @@ for (const iterator of data) {
   const accountButton=document.createElement("button");
   accountButton.innerText="🔒  Please Bid "
   account.append(accountButton);
+  accountButton.addEventListener("click",()=>{
+    cardSelected.innerHTML="";
+    const h1=document.createElement("h1");
+    h1.innerText=`you selected card #${iterator.id}`;
+    h1.setAttribute("class","cardSelected");
+    cardSelected.append(h1);
+  })
 
 }
