@@ -35,3 +35,49 @@ const data = [
     accountImage: "https://themesflat.co/html/axiesv/assets/images/avatar/avt-12.jpg",
   },
 ];
+const cards=document.querySelector(".cards");
+for (const iterator of data) {
+  const card=document.createElement("article");
+  card.classList.add("cards","cards__card");
+  card.setAttribute("id",iterator.id);
+  cards.append(card);
+
+  const imageContainer=document.createElement("div");
+  imageContainer.classList.add("cards__card__img");
+  card.append(imageContainer);
+
+  const image=document.createElement("img");
+  image.setAttribute("src",iterator.src);
+  imageContainer.append(image);
+
+  const icon=document.createElement("span");
+  icon.classList.add("cards__card__img__icon");
+  icon.innerText="♡ 100";
+  imageContainer.append(icon);
+
+  const title=document.createElement("p");
+  title.innerText=iterator.title;
+  title.classList.add("cards__card__body__title");
+  card.append(title);
+
+  const span=document.createElement("span");
+  span.innerText="BSC";
+  title.append(span);
+
+  const account=document.createElement("div");
+  account.classList.add("cards__card__footer","cards__card__footer__account");
+  card.append(account);
+
+  const accountImage=document.createElement("img");
+  accountImage.setAttribute("src","./avt-12.jpg")
+  account.append(accountImage);
+
+  const accountName=document.createElement("h4");
+  accountName.innerText="Ralph Garraway";
+  account.append(accountName);
+
+  const accountButton=document.createElement("button");
+  accountButton.innerText="🔒  Please Bid "
+  account.append(accountButton);
+
+}
