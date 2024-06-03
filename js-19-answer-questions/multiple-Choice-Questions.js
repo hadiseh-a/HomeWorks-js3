@@ -17,8 +17,8 @@ D: None of the above
 
 3. Suppose that you've been told that p is a promise. What will typeof p return?
 
-A: 'object' 
-XB: 'promise'
+xA: 'object' 
+B: 'promise'
 C: 'function' 
 =========================================================
 
