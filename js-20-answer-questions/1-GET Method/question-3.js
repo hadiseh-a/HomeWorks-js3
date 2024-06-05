@@ -5,6 +5,25 @@
  Todo 4: In order to use the HTML and CSS, use the <article> tag as a container to append all the cards. For each card, create a <div> to set the innerText inside it.
 */
 
-// const article = document.querySelector("article");
+const article = document.querySelector("article");
 
 // ! Answer
+async function getData() {
+  try {
+    const data = await fetch("https://jsonplaceholder.typicode.com/users");
+    const result = await data.json();
+    for (const data of result) {
+        makeCard(data.name,data.company.name);
+        console.log(result);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+getData();
+function makeCard(name, company) {
+  article.innerHTML += `<div class="card">
+<span>name: ${name}<span>
+<p>company name: ${company}</p>
+</div>`;
+}

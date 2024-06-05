@@ -1,0 +1,15 @@
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    border: dotted;
+    margin: 1em;
+    font-size: larger;
+    font-style: oblique ;
+    text-align: center;
+    align-content: center;
+}
