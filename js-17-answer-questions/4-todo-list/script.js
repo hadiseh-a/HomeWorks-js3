@@ -23,11 +23,10 @@ function todoList(todos) {
     done(li);
   }
 }
-function done(doing){
-  doing.addEventListener("click",()=>
-  {
+function done(doing) {
+  doing.addEventListener("click", () => {
     doing.classList.toggle("lineThrough");
-  })
+  });
 }
 
 const todos = [
