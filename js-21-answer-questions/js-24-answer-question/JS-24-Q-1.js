@@ -12,3 +12,17 @@
  */
 
 //!Answer:
+function createPerson(name, ages, profession) {
+  const person = {};
+  person.name = name;
+  person.age = ages;
+  person.profession = profession;
+  person.introduce = function () {
+    return `Hi, my name is ${person.name}. I'm ${this.age} years old and work as a ${person.profession}.`;
+  };
+  return person;
+}
+const John = new createPerson("John Doe", 30, "Web Developer");
+console.log(
+  John.name + "\n" + John.age + "\n" + John.profession + "\n" + John.introduce()
+);
